@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stylish Alarm Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Alarm Clock</h1>
+  
+  <div id="time">Loading Time...</div>
+  <div id="alarm">Set your alarm below</div>
+
+  <div id="bell">🔔</div>
+
+  <input type="number" id="secondsInput" placeholder="Seconds for alarm">
+  
+  <select id="soundSelect">
+    <option value="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">T-Rex Roar</option>
+    <option value="https://assets.mixkit.co/sfx/preview/mixkit-alarm-tone-996.mp3">Classic Alarm</option>
+    <option value="https://assets.mixkit.co/sfx/preview/mixkit-doorbell-single-press-333.mp3">Doorbell</option>
+    <option value="https://assets.mixkit.co/sfx/preview/mixkit-retro-game-notification-212.mp3">Game Notification</option>
+  </select>
+
+  <button onclick="startAlarm()">Start Alarm</button>
+  <button onclick="resetAlarm()">Reset Alarm</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+

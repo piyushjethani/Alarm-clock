@@ -1,0 +1,120 @@
+/* Import a nice font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #bfbebe;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff;
+}
+
+#time {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#alarm {
+  margin-bottom: 20px;
+  min-height: 24px;
+  font-size: 1.2rem;
+  color: #00e5ff;
+}
+
+#bell {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: none;
+  animation: ring 1s infinite;
+}
+
+input, select, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+
+}
+
+input, select {
+  background: rgba(52, 43, 148, 0.701);
+  color: rgb(0, 0, 0);
+}
+button {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  color: rgb(225, 219, 219);
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #e100ff, #7f00ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
+}
+
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #time {
+    font-size: 1.2rem;
+  }
+
+  #bell {
+    font-size: 3rem;
+  }
+}
